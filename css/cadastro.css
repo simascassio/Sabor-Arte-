@@ -1,0 +1,158 @@
+* * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body { /* FORA */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #F3E9DA; /* bege suave */
+    padding-top: 100px; /* espaço por causa do header fixo */
+}
+
+
+.opcoes { /* NAV */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #B22222; /* vermelho institucional */
+    padding: 30px 0;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+
+.opcoes a { /* NAV TEXTO */
+    text-decoration: none;
+    margin: 0 25px;
+    
+}
+
+
+.text { /* NAV TEXTO */
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 6px;
+    margin: 0 10px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    letter-spacing: 2px;
+    font-size: 17px;
+}
+
+
+.opcoes a:hover { /* NAV TEXTO */
+    color: #8B0000; /* vermelho escuro no hover */
+}
+
+
+.container { /* DENTRO */
+    background: #FFF9F9; /* branco rosado */
+    padding: 80px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 700px;
+    text-align: center;
+}
+
+
+.container h2 { /* DADOS PESSOAIS */
+    margin-bottom: 20px;
+    color: #B22222;
+}
+
+
+form { /* TEXO DO FORMULARIO */
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333333;
+}
+
+
+label { /* TEXTO DE FORA */
+    align-self: flex-start;
+    font-size: 15px;
+    margin-left: 25px;
+    margin-bottom: 5px;
+    color: #333333;
+    
+
+}
+
+
+.input { /* PREENCHER FORMULARIO */
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #B22222;
+    border-radius: 5px;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+
+select { /* SEXO */
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 2px solid #B22222;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+
+.btn { /* BOTAO */
+    width: 100%;
+    max-width: 220px;
+    height: 40px;
+    background-color: #B22222;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: medium;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+.error { /* MENSAGEM DE ERRO */
+    color: red;
+    display: none;
+}
+
+
+.btn:hover { /* DENTRO BOTAO */
+    background-color: #8B0000;
+    transform: translateY(-3px); /* agora sim sobe no hover */
+}
+
+
+@media (max-width: 400px) {
+    .container {
+        width: 90%;
+    }
+
+    .opcoes a {
+        margin: 0 10px;
+        font-size: 14px;
+    }
+
+    .text {
+        font-size: 14px;
+    }
+
+    .input {
+        width: 100%;
+    }
+}

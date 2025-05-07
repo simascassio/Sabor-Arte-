@@ -1,0 +1,205 @@
+* ** {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #F3E9DA; /* bege suave */
+    
+}
+
+/* Header fixo no topo */
+.opcoes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #B22222; /* vermelho institucional */
+    padding: 30px 0;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.opcoes a {
+    text-decoration: none;
+    margin: 0 25px;
+}
+
+
+
+.text {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 6px;
+    width: 100%;
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 17px;
+}
+
+.opcoes a:hover {
+    color: #8B0000; /* vermelho escuro no hover */
+}
+
+.container-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 150px 50px 50px;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Texto + botão */
+.conteudo-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1.5;
+}
+
+.conteudo-texto h1 {
+    font-size: 3.2rem;
+    margin-bottom: 20px;
+}
+
+/* Botão */
+.btn-cardapio  {
+    background-color: #B22222;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-cardapio:hover {
+    background-color: #8B0000;
+    transform: translate(-5px);
+}
+
+/* Imagem da pizza */
+.imagem-pizza {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.imagem-pizza img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container-2 {
+    width: 100%;
+    background-color: #fff5ed;
+    text-align: center;
+    padding: 60px 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* impede a rolagem lateral */
+}
+
+.container-2 h2 {
+    margin-bottom: 40px;
+    color: #B22222;
+    font-size: 28px;
+    font-weight: 800;
+    text-align: center;
+  
+}
+
+.icones-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.icone {
+    flex: 1 1 30%;
+    padding: 20px;
+    box-sizing: border-box;
+    min-width: 200px;
+}
+
+.icone img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.icone p {
+    font-size: 19px;
+    font-weight: 600;
+    color: #333;
+}
+
+.quem-somos {
+    background-color: #F3E9DA; /* Cor de fundo beige suave, igual a da seção da pizza */
+    padding: 60px 0px;
+    text-align: center;
+    color: #333;
+    box-sizing: border-box;
+    width: 100%;
+  
+}
+
+.sobre-nos{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+    text-align: center;
+}
+
+.sobre-nos h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #B22222; /* Vermelho institucional */
+    margin-bottom: 20px;
+}
+
+.sobre-nos p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .container-1 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .conteudo-texto {
+        align-items: center;
+    }
+
+    .imagem-pizza {
+        margin-top: 20px;
+    }
+}

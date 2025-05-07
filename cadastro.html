@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="cadastro.css">
+    <title>cadastro</title>
+</head>
+<body>
+     <!------------------------------------------------NAV BAR------------------------------------------------------>
+     <header class="opcoes">
+        <img src="imagens/ChatGPT_Image_19_de_abr._de_2025__12_17_19-removebg-preview.png" class="foto">
+        <nav>
+           <a href="Home.html" class="text">Home</a>
+           <a href="/Login.html" class="text">Login</a>
+           <a href="#" class="text">Contato</a>
+           <a href="/Cardapio.html" class="text">Cardápio</a>  
+        </nav>      
+   </header>
+   <!-------------------------------------------------------------------------------------------------------------->
+
+
+   <main>
+     <section class="container">
+        <h2>DADOS PESSOAIS</h2> <!--SUBTITULO-->
+
+
+        
+        <form onsubmit="return validarFormulario()"> <!--INICIO DO FORMULARIO-->
+
+
+
+            <label for="nome">NOME</label>
+            <input type="text" id="nome" class="input" placeholder="Nome (15-80 caracteres)" required><br><!--CAMPO NOME-->
+
+
+            
+            <label for="nome">DATA DE NASCIMENTO</label>
+            <input type="date" id="dataNascimento" class="input" placeholder="Data de Nascimento" required><br> <!-- CAMPO DATA DE NASCIMENTO-->
+
+
+            
+            <!-----------------------------------CAMPO GÊNERO----------------------------------------------->
+            <label for="nome">SEXO</label>
+
+            <select id="nome" name="nome">
+                <option value="Masculino">Masculino</option>
+                <option value="Feminino">Feminino</option>
+                <option value="nao-binario">Não-binário</option>
+                <option value="outro">Outro</option>
+                <option value="prefiro-nao-dizer">Prefiro não dizer</option>
+            </select><br>
+            <!---------------------------------------------------------------------------------------------->
+
+
+
+            <label for="nome">NOME MATERNO</label>
+            <input type="text" id="nomeMaterno" class="input" placeholder="Nome Materno" required><br> <!--CAMPO NOME MATERNO-->
+
+
+
+            <label for="nome">CPF</label>
+            <input type="text" id="cpf" class="input" placeholder="CPF" required><!--CAMPO CPF-->
+
+
+
+            <h2>CONTATO</h2><!--SUBTITULO CONTATO-->
+
+
+
+            <label for="nome">E-MAIL</label>
+            <input type="email" id="email" class="input" placeholder="E-mail" required><br><!--CAMPO E-MAIL-->
+
+
+
+            <label for="nome">TELEFONE CELULAR</label>
+            <input type="text" id="telefoneCelular" class="input" placeholder="Telefone Celular (+55)XX XXXXXXXXX" required><br><!--CAMPO TELEFONE CELULAR-->
+
+
+
+            <label for="nome">TELEFONE FIXO</label>
+            <input type="text" id="telefoneFixo" class="input" placeholder="Telefone Fixo (+55)XX XXXXXXXXX" required><br><!--CAMPO TELEFONE FIXO-->
+
+
+
+            <label for="nome">CEP</label>
+            <input type="text" id="cep" class="input" placeholder="CEP" required onblur="buscarEndereco()"><br><!--CAMPO CEP-->
+
+
+
+            <label for="nome">ENDEREÇO</label>
+            <input type="text" id="endereco" class="input" placeholder="Endereço Completo" required><br><!--CAMPO ENDEREÇO-->
+
+
+
+            <label for="nome">NUMERO</label>
+            <input type="text" id="endereco" class="input" placeholder="N° da Casa" required><br>
+
+
+
+            <h2>ACESSO AO SISTEMA</h2><!--SUBTITULO-->
+
+
+
+            <label for="nome">LOGIN</label>
+            <input type="text" id="login" class="input" placeholder="Login (6 caracteres)" required><br><!--LOGIN-->
+
+
+
+            <label for="nome">SENHA</label>
+            <input type="password" id="senha" class="input" placeholder="Senha (8 caracteres)" required><br><!--SENHA-->
+
+
+
+            <label for="nome">CONFIRMAR SENHA</label>
+            <input type="password" id="confirmarSenha" class="input" placeholder="Confirmar Senha" required><br><!--CONFIRMAR SENHA-->
+
+
+
+            <p class="error" id="error-message"></p><!--MENSAGEM DE ERRO-->
+
+
+
+            <h2>ACESSO AO SISTEMA</h2><!--SUBTITULO-->
+
+
+
+            <button type="submit" class="btn">CADASTRAR</button><br><!--ARÉA DO BOTAO ENVIAR-->
+            <button type="reset" class="btn">LIMPAR TELA</button><!--ARÉA DO BOTAO DE LIMPAR TELA-->
+        </form><!--FIM FORMULARIO-->
+     </section>
+   </main>
+
+
+    <script>
+
+        
+
+        function validarFormulario() {
+            var nome = document.getElementById("nome").value;
+            var cpf = document.getElementById("cpf").value;
+            var login = document.getElementById("login").value;
+            var senha = document.getElementById("senha").value;
+            var confirmarSenha = document.getElementById("confirmarSenha").value;
+            var telefoneCelular = document.getElementById("telefoneCelular").value;
+            var telefoneFixo = document.getElementById("telefoneFixo").value;
+            var errorMessage = document.getElementById("error-message");
+
+
+
+            errorMessage.style.display = "none"; //RESETAR MENSAGEM DE ERRO//
+            
+            
+
+            if (nome.length < 15 || nome.length > 80 || !/^[a-zA-Z\s]+$/.test(nome)) { //AQUI FOI USADO UM IF PARA VALIDAR O NOME COM 15 ATÉ 80 CARACTERES
+                errorMessage.textContent = "Nome deve conter entre 15 e 80 caracteres alfabéticos."; //MENSAGEM DE ERRO PARA AVISAR O USUARIO
+                errorMessage.style.display = "block";
+                return false;
+            }
+
+
+
+            if (!/^\d{3}\.\d{3}\.\d{3}-\d{2}$/.test(cpf)) {
+                errorMessage.textContent = "CPF inválido!"; //MENSAGEM DE ERRO AVISANDO QUE O CPF TÁ INVÁLIDO
+                errorMessage.style.display = "block";
+                return false;
+            }
+
+
+
+            if (!/^\(\+55\)\d{2} \d{9}$/.test(telefoneCelular) || !/^\(\+55\)\d{2} \d{9}$/.test(telefoneFixo)) {
+                errorMessage.textContent = "Formato de telefone inválido!"; //MENSAGEM DE ERRO INFORMANDO O FORMATO INVÁLIDO
+                errorMessage.style.display = "block";
+                return false;
+            }
+
+
+
+            if (login.length !== 6 || !/^[a-zA-Z]+$/.test(login)) {
+                errorMessage.textContent = "Login deve conter exatamente 6 caracteres alfabéticos."; //MENSAGEM DE ERRO AVISANDO A QUANTIDADE DE LETRAS
+                errorMessage.style.display = "block";
+                return false;
+            }
+
+
+
+            if (senha.length !== 8 || !/^[a-zA-Z]+$/.test(senha)) {
+                errorMessage.textContent = "Senha deve conter exatamente 8 caracteres alfabéticos."; //MENSAGEM DE ERRO INFORMANDO A QUANTIDADE DE LETRAS
+                errorMessage.style.display = "block";
+                return false;
+            }
+
+
+
+            if (senha !== confirmarSenha) {
+                errorMessage.textContent = "As senhas não coincidem!"; //MENSAGEM DE ERRRO INFORMANDO QUE A SENHA ESTÁ DIFERENTE
+                errorMessage.style.display = "block";
+                return false;
+            }
+
+
+
+            alert("Cadastro realizado com sucesso!");
+            return true;
+        }
+
+
+
+        function buscarEndereco() { //VIA CEP
+            var cep = document.getElementById("cep").value;
+            var url = "https://viacep.com.br/ws/" + cep + "/json/";
+
+            fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                if (!data.erro) {
+                    document.getElementById("endereco").value = data.logradouro + ", " + data.bairro + ", " + data.localidade + " - " + data.uf;
+                } else {
+                    alert("CEP não encontrado, preencha manualmente.");
+                }
+            })
+            .catch(() => alert("Erro na conexão com a API ViaCEP."));
+        }
+    </script>
+
+</body>
+
+</html>
