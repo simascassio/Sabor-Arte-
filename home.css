@@ -186,6 +186,53 @@ body {
     margin-right: auto;
 }
 
+.avaliacoes {
+    padding: 40px;
+    background-color: #f8f8f8;
+    
+  }
+  
+  .avaliacoes-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .avaliacao {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    flex: 1 1 45%;
+  }
+  
+  .avaliacao img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+  }
+  
+  .texto-avaliacao {
+    text-align: left;
+  }
+  
+  .estrelas {
+    color: gold;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+
 
 
 /* Responsivo */
