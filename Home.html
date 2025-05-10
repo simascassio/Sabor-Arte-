@@ -7,14 +7,23 @@
     <title>Home</title>
 </head>
 <body>
-    <header class="opcoes">
+      <header class="opcoes">
         <nav>
-            <a href="Home.html" class="text">Home</a>
+           <a href="Home.html" class="text">Home</a>
+            <a href="Home.html#redes" class="text">Contato</a>
             <a href="Login.html" class="text">Login</a>
-            <a href="" class="text">Contato</a>
-            <a href="Cardapio.html" class="text">Cardápio</a>
+            <div class="dropdown">
+               <a href="Cardapio.html" class="text">Cardápio</a>
+            <div class="dropdown-content">
+                <a href="Cardapio.html">Pizzas</a>
+                 <a href="Cardapio.html#bebidas">Sobremesas</a>
+                <a href="Cardapio.html#sobremesas">Bebidas</a>
+            </div>
+</div>
+
+             
         </nav>
-    </header>    
+    </header>
     <main>
         <section class="container-1">
             <div class="conteudo-texto">
@@ -127,7 +136,7 @@
               <h3>Fale com a gente</h3>
               <p>Estamos sempre prontos para ouvir você! Siga nossas redes ou mande uma mensagem:</p>
             </div>
-            <div class="icones-redes">
+            <div class="icones-redes" id="redes">
               <a href="https://www.instagram.com/seuinsta" target="_blank" aria-label="Instagram">
                 <img src="https://img.icons8.com/?size=50&id=BrU2BBoRXiWq&format=png" alt="Instagram">
               </a>

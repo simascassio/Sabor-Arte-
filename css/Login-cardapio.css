@@ -16,6 +16,42 @@ body {
     padding-top: 100px; /* espaço por causa do header fixo */
 }
 
+
+
+
+/* Estilo do dropdown (submenu) */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #B22222;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.dropdown-content a:hover {
+    background-color: #8B0000;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
 /* Header fixo no topo */
 .opcoes {
     position: fixed;

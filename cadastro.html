@@ -9,11 +9,11 @@
 <body>
      <!------------------------------------------------NAV BAR------------------------------------------------------>
      <header class="opcoes">
-        <img src="imagens/ChatGPT_Image_19_de_abr._de_2025__12_17_19-removebg-preview.png" class="foto">
+       
         <nav>
            <a href="Home.html" class="text">Home</a>
            <a href="/Login.html" class="text">Login</a>
-           <a href="#" class="text">Contato</a>
+           <a href="Home.html#redes" class="text">Contato</a>
            <a href="/Cardapio.html" class="text">Cardápio</a>  
         </nav>      
    </header>
@@ -31,12 +31,12 @@
 
 
             <label for="nome">NOME</label>
-            <input type="text" id="nome" class="input" placeholder="Nome (15-80 caracteres)" required><br><!--CAMPO NOME-->
+               <input type="text" id="nome" class="input" placeholder="Digite seu Nome Completo" minlength="15" maxlength="80" pattern="[A-Za-z À-Ÿ\s]+" required><br><!--CAMPO NOME-->
 
 
             
             <label for="nome">DATA DE NASCIMENTO</label>
-            <input type="date" id="dataNascimento" class="input" placeholder="Data de Nascimento" required><br> <!-- CAMPO DATA DE NASCIMENTO-->
+               <input type="date" id="dataNascimento" class="input" placeholder="Data de Nascimento" required><br> <!-- CAMPO DATA DE NASCIMENTO-->
 
 
             
@@ -54,13 +54,13 @@
 
 
 
-            <label for="nome">NOME MATERNO</label>
-            <input type="text" id="nomeMaterno" class="input" placeholder="Nome Materno" required><br> <!--CAMPO NOME MATERNO-->
+          <!--  <label for="nome">NOME MATERNO</label>
+            <input type="text" id="nomeMaterno" class="input" placeholder="Nome Materno" required><br> --> <!--CAMPO NOME MATERNO-->
 
 
 
             <label for="nome">CPF</label>
-            <input type="text" id="cpf" class="input" placeholder="CPF" required><!--CAMPO CPF-->
+            <input type="text" id="cpf" class="input" placeholder="CPF" required  maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" ><!--CAMPO CPF-->
 
 
 
@@ -69,27 +69,27 @@
 
 
             <label for="nome">E-MAIL</label>
-            <input type="email" id="email" class="input" placeholder="E-mail" required><br><!--CAMPO E-MAIL-->
+            <input type="email" id="email" class="input" placeholder="sabor-art@gmail.com" maxlength="30" required><br><!--CAMPO E-MAIL-->
 
 
 
             <label for="nome">TELEFONE CELULAR</label>
-            <input type="text" id="telefoneCelular" class="input" placeholder="Telefone Celular (+55)XX XXXXXXXXX" required><br><!--CAMPO TELEFONE CELULAR-->
+            <input type="text" id="telefoneCelular" class="input" placeholder="Telefone Celular (+55)XX XXXXXXXXX" required  maxlength="18"   pattern="^\(\+55\)\d{2}-\d{8}$" ><br><!--CAMPO TELEFONE CELULAR-->
 
 
 
             <label for="nome">TELEFONE FIXO</label>
-            <input type="text" id="telefoneFixo" class="input" placeholder="Telefone Fixo (+55)XX XXXXXXXXX" required><br><!--CAMPO TELEFONE FIXO-->
+            <input type="text" id="telefoneFixo" class="input" placeholder="Telefone Fixo (+55)XX XXXXXXXXX" required maxlength="18"    pattern="^\(\+55\)\d{2}-\d{8}$"  ><br><!--CAMPO TELEFONE FIXO-->
 
 
 
             <label for="nome">CEP</label>
-            <input type="text" id="cep" class="input" placeholder="CEP" required onblur="buscarEndereco()"><br><!--CAMPO CEP-->
+            <input type="text" id="cep" class="input" placeholder="CEP"   required onblur="buscarEndereco()"><br><!--CAMPO CEP-->
 
 
 
             <label for="nome">ENDEREÇO</label>
-            <input type="text" id="endereco" class="input" placeholder="Endereço Completo" required><br><!--CAMPO ENDEREÇO-->
+            <input type="text" id="endereco" class="input" placeholder="Endereço Completo" maxlength="100"  required><br><!--CAMPO ENDEREÇO-->
 
 
 
@@ -103,17 +103,17 @@
 
 
             <label for="nome">LOGIN</label>
-            <input type="text" id="login" class="input" placeholder="Login (6 caracteres)" required><br><!--LOGIN-->
+            <input type="text" id="login" class="input" placeholder="Login (6 caracteres)" minlength="6" maxlength="6" pattern="[A-Za-z]{6}"  required><br><!--LOGIN-->
 
 
 
             <label for="nome">SENHA</label>
-            <input type="password" id="senha" class="input" placeholder="Senha (8 caracteres)" required><br><!--SENHA-->
+            <input type="password" id="senha" class="input" placeholder="Senha (8 caracteres)" minlength="8"  maxlength="8"  pattern="[A-Za-z]{8}"  required><br><!--SENHA-->
 
 
 
             <label for="nome">CONFIRMAR SENHA</label>
-            <input type="password" id="confirmarSenha" class="input" placeholder="Confirmar Senha" required><br><!--CONFIRMAR SENHA-->
+            <input type="password" id="confirmarSenha" class="input" placeholder="Confirmar Senha"     minlength="8"  maxlength="8"   pattern="[A-Za-z]{8}" required><br><!--CONFIRMAR SENHA-->
 
 
 

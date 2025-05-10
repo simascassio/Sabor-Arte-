@@ -16,7 +16,6 @@ body { /* FORA */
     padding-top: 100px; /* espaço por causa do header fixo */
 }
 
-
 .opcoes { /* NAV */
     position: fixed;
     top: 0;
@@ -29,6 +28,7 @@ body { /* FORA */
     z-index: 1000;
 }
 
+/* Estilo do dropdown (submenu) */
 
 .opcoes a { /* NAV TEXTO */
     text-decoration: none;

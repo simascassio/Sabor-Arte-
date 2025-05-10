@@ -4,16 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cardápio</title>
-    <link rel="stylesheet" href="css/Login.css">
+    <link rel="stylesheet" href="css/Login-cardapio.css">
 </head>
 <body>
     <!-- Header -->
     <header class="opcoes">
         <nav>
-            <a href="Home.html" class="text">Home</a>
-            <a href="index.html" class="text">Login</a>
-            <a href="#" class="text">Contato</a>
-            <a href="index2.html" class="text">Cardápio</a>
+           <a href="Home.html" class="text">Home</a>
+            <a href="Login.html" class="text">Login</a>
+            <a href="Home.html#redes" class="text">Contato</a>
+            <div class="dropdown">
+               <a href="/Cardapio.html" class="text">Cardápio</a>
+            <div class="dropdown-content">
+                <a href="Cardapio.html">Pizzas</a>
+                 <a href="/Cardapio.html#sobremesas">Sobremesas</a>
+                <a href="/Cardapio.html#bebidas">Bebidas</a>
+            </div>
+</div>
+
+             
         </nav>
     </header>
 
@@ -22,7 +31,7 @@
         <h1>Cardápio</h1>
 
     <!-- Seção de Pizzas -->
-        <section class="menu-section" aria-label="Pizzas">
+        <section class="menu-section" aria-label="Pizzas" id="pizzas">
             <h2>Pizzas</h2>
             <div class="grid">
                 <!-- Pizza Margherita -->
@@ -135,7 +144,7 @@
             </div>
         </section>
          <!-- Seção de Bebidas -->
-        <section class="menu-section" aria-label="Bebidas">
+        <section class="menu-section" aria-label="Bebidas" id="bebidas">
             <h2>Bebidas</h2>
             <div class="grid">
                 <!-- Refrigerante 350 ml -->
@@ -189,7 +198,7 @@
         </section>
         
         <!-- Seção de Sobremesas -->
-        <section class="menu-section" aria-label="Sobremesas">
+        <section class="menu-section" aria-label="Sobremesas" id="sobremesas">
             <h2>Sobremesas</h2>
             <div class="grid">
                 <!-- Torta de Limão -->
