@@ -156,3 +156,109 @@ select { /* SEXO */
         width: 100%;
     }
 }
+
+
+
+#dark-btn{
+    width: 40px;
+    position: fixed;
+    top: 300px;
+    right: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transition: background-color 0.3s ease;
+}
+
+#dark-btn:hover {
+    transform: translateY(-5px);
+
+}
+
+#light-btn{
+    width: 40px;
+    position: fixed;
+    top: 300px;
+    right: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transition: background-color 0.3s ease;
+}
+
+#light-btn:hover {
+    transform: translateY(-5px);
+}
+/* Tema escuro global */
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+/* Herdar cor do texto para tudo */
+body.dark-mode * {
+  color: inherit ;
+  background-color: transparent;
+  border-color: #555;
+}
+
+/* Sobrescreve elementos brancos específicos */
+body.dark-mode header,
+body.dark-mode nav,
+body.dark-mode section
+ {
+  background-color: #1e1e1e ;
+ 
+}
+
+ body.dark-mode p{
+    color: #f1f1f1; /* Cor do texto em modo escuro */
+ } 
+ 
+body.dark-mode h1 {
+    color: #B22222; /* Cor do título em modo escuro */
+}
+body.dark-mode h2 {
+    color: #b22222; /* Cor do texto em modo escuro */
+}
+
+
+body.dark-mode .btn{
+    background-color: #8B0000;
+}
+body.dark-mode .btn:hover {
+    background-color: #250404;
+ 
+}
+
+body.dark-mode .container {
+    background-color: #2c2c2c; /* cinza escuro */
+    color: #f1f1f1; /* texto claro */
+}
+
+#dark-btn{
+    width: 40px;
+    position: fixed;
+    top: 300px;
+    right: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transition: background-color 0.3s ease;
+}
+
+#dark-btn:hover {
+    transform: translateY(-5px);
+
+}
+
+#light-btn{
+    width: 40px;
+    position: fixed;
+    top: 300px;
+    right: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transition: background-color 0.3s ease;
+}
+
+#light-btn:hover {
+    transform: translateY(-5px);
+}

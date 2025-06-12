@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/home.css">
+    <script src="js/dark.js" defer></script>
     <title>Home</title>
 </head>
 <body>
@@ -12,18 +13,20 @@
            <a href="Home.html" class="text">Home</a>
             <a href="Home.html#redes" class="text">Contato</a>
             <a href="Login.html" class="text">Login</a>
-            <div class="dropdown">
+          <div class="dropdown">
                <a href="Cardapio.html" class="text">Cardápio</a>
-            <div class="dropdown-content">
+              <div class="dropdown-content">
                 <a href="Cardapio.html">Pizzas</a>
                  <a href="Cardapio.html#bebidas">Sobremesas</a>
                 <a href="Cardapio.html#sobremesas">Bebidas</a>
-            </div>
-</div>
-
+              </div>    
+          </div> 
              
         </nav>
+
     </header>
+
+
     <main>
         <section class="container-1">
             <div class="conteudo-texto">
@@ -36,6 +39,15 @@
                 <img src="imagens/pizzahome.svg" alt="pizza home">
             </div>
         </section>
+
+         <section class="dark-mode">
+  <!-- Botão para ativar Dark Mode -->
+  <img id="dark-btn" src="https://cdn-icons-png.flaticon.com/128/6077/6077517.png" alt="Ativar tema escuro">
+
+  <!-- Botão para voltar ao tema claro (escondido inicialmente) -->
+  <img id="light-btn" src="https://cdn-icons-png.flaticon.com/128/6077/6077095.png" alt="Ativar tema claro" style="display: none;">
+</section>
+
 
         <section class="container-2">
             <h2> O melhor sabor da cidade !</h2>
@@ -174,5 +186,6 @@
 });
 
           </script>
+          <script src="js/darkmode.js"></script>
           
 </html>
