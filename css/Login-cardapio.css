@@ -276,8 +276,16 @@ form label.nome {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
 }
 
+
+
+.img-menor:hover{
+    transform: scale(1.1);
+}
 .item h3 {
     margin-bottom: 5px;
     color: #B22222;
