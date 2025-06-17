@@ -13,8 +13,9 @@
       <header class="opcoes">
         <nav>
            <a href="Home.html" class="text">Home</a>
-            <a href="Home.html#redes" class="text">Contato</a>
-            <a href="Login.html" class="text">Login</a>
+           <a href="Home.html#redes" class="text">Contato</a>
+           <a href="Login.html" class="text">Login</a>
+           <a href="finalizar.html" class="text">Pedido</a>
           <div class="dropdown">
                <a href="Cardapio.html" class="text">Cardápio</a>
               <div class="dropdown-content">
@@ -33,24 +34,30 @@
                 <div class="pedido-finalizar">
                     <h1> Confira os itens do seu pedido:</h1>
                     <img src="https://cdn-icons-png.freepik.com/256/2611/2611181.png?ga=GA1.1.1350957922.1743372057&semt=ais_hybrid" alt="">
-                </div>
-                
-
-                
-                
-                <div>
-                   
+                </div class="pedido-carrinho">
                     <ul id="pedido-lista">
                         <!-- Itens do pedido serão adicionados aqui dinamicamente -->
                     </ul>
+                <div>
+                   
                 </div>
             </section>
         </main>
+
+        
+         <section class="dark-mode">
+  <!-- Botão para ativar Dark Mode -->
+              <img id="dark-btn" src="https://cdn-icons-png.flaticon.com/128/6077/6077517.png" alt="Ativar tema escuro">
+
+  <!-- Botão para voltar ao tema claro (escondido inicialmente) -->
+              <img id="light-btn" src="https://cdn-icons-png.flaticon.com/128/6077/6077095.png" alt="Ativar tema claro" style="display: none;">
+        </section>
+
     
         <!-- Seção de Endereço -->
         <section class="endereco-section" aria-label="Endereço de Entrega">
             <h2>Endereço para Entrega :</h2>
-            <form id="form-endereco">
+            <form id="form-endereco" class="form">
                 <label for="cep">CEP:</label>
                 <input type="text" id="cep" name="cep" placeholder="00000-000" required>
                 

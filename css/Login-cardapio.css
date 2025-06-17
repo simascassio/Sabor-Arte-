@@ -547,7 +547,7 @@ body.dark-mode h1 {
     color: #B22222; /* Cor do título em modo escuro */
 }
 body.dark-mode h2 {
-    color: #b22222; /* Cor do texto em modo escuro */
+    color: #fff; /* Cor do texto em modo escuro */
 }
 
 body.dark-mode .item {

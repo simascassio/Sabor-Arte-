@@ -5,7 +5,8 @@
     const total = parseFloat(localStorage.getItem("total")) || 0;
 
     if (pedido.length === 0) {
-      lista.innerHTML = "<li>Nenhum item encontrado no pedido.</li>";
+      lista.innerHTML = "<li id='pedido-feito'>Nenhum item encontrado no pedido.</li>";
+
       return;
     }
 

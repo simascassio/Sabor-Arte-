@@ -124,9 +124,12 @@ body {
 #pedido-lista li {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
+  font-weight: 600;
+  font-style: italic;
   margin-bottom: 10px;
   color: #333;
   list-style: none;
+  padding: 5px;
 }
 
 
@@ -230,7 +233,7 @@ body {
   text-align: center;
   font-family: 'Roboto', sans-serif;
   box-shadow: 0 8px 16px rgba(0,0,0,0.25);
-  animation: slideIn 0.4s ease;
+  animation: slideIn 1.9s ease;
 }
 
 /* Botão de fechar */
@@ -240,6 +243,13 @@ body {
   top: 20px;
   font-size: 28px;
   cursor: pointer;
+}
+#pedido-feito {
+    padding: 15px;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 18px;
+   
 }
 
 /* Animações */
@@ -251,4 +261,95 @@ body {
 @keyframes slideIn {
   from { transform: translateY(-30px); opacity: 0; }
   to   { transform: translateY(0); opacity: 1; }
+}
+
+
+#dark-btn{
+    width: 40px;
+    position: fixed;
+    top: 300px;
+    right: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transition: background-color 0.3s ease;
+}
+
+#dark-btn:hover {
+    transform: translateY(-5px);
+
+}
+
+#light-btn{
+    width: 40px;
+    position: fixed;
+    top: 300px;
+    right: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transition: background-color 0.3s ease;
+}
+
+#light-btn:hover {
+    transform: translateY(-5px);
+}
+/* Tema escuro global */
+body.dark-mode {
+  background-color:  #1e1e1e;
+  color: #f1f1f1;
+}
+
+/* Herdar cor do texto para tudo */
+body.dark-mode * {
+  color: inherit ;
+  background-color: transparent;
+  border-color: #555;
+}
+
+/* Sobrescreve elementos brancos específicos */
+body.dark-mode header,
+body.dark-mode nav{
+    background-color: #2c2c2c;;
+}
+body.dark-mode section{
+ 
+  background-color:  #1e1e1e;
+ 
+}
+
+.dark-mode #pedido-lista {
+    background-color: #2c2c2c;
+   
+}
+
+.dark-mode #pedido-feito {
+    color: #fff;
+}
+
+body.dark-mode #form-endereco {
+    background-color: #2c2c2c;
+    color: #fff;
+    border: 1px solid #555;
+    
+   
+}
+
+body.dark-mode input,
+body.dark-mode select {
+    background-color: #333;
+    color: #f1f1f1;
+    border-color: #777;
+}
+body.dark-mode .btn {
+    background-color: #8B0000;
+    color: white;
+    border: 1px solid #777;
+} 
+
+.dark-mode #pedido-lista li {
+    color: #fff;
+}
+
+.dark-mode .modal-conteudo {
+    background-color: #fff;
+    color: #2c2c2c;
 }
