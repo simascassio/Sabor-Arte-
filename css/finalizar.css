@@ -1,0 +1,254 @@
+
+* * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #F3E9DA; /* bege suave */
+    padding-top: 100px; /* espaço por causa do header fixo */
+}
+
+
+
+
+/* Estilo do dropdown (submenu) */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #B22222;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.dropdown-content a:hover {
+    background-color:#d1c89f;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* Header fixo no topo */
+.opcoes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #B22222; /* vermelho institucional */
+    padding: 30px 0;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.opcoes a {
+    text-decoration: none;
+    margin: 0 25px;
+    color: white;
+}
+
+.opcoes a:hover {
+    color: #8B0000 ; /* cor de destaque ao passar o mouse */
+}
+
+.pedido-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 50px;
+    
+}
+
+#pedido-lista {
+    width: 400px;
+    height: 400px;
+    background-color: #FFF9F9;
+    border-radius: 9px;
+}
+.pedido-finalizar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px; 
+    margin-bottom: 10px;
+}
+
+.pedido-finalizar h1 {
+    margin: 0;
+    padding-right: 10px; /* espaço entre o h1 e o ícone */
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+.pedido-finalizar img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+
+.pedido-finalizar img{
+    width: 30px;
+    display: flex;
+    align-self: center;
+  
+}
+#pedido-lista li {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #333;
+  list-style: none;
+}
+
+
+/* Seção Endereço */
+.endereco-section {
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.endereco-section h2{
+    text-align: center;
+  
+}
+
+.endereco-section form {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color:  #FFF9F9 ;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width:  80px;
+    
+    
+}
+
+.endereco-section label {
+    font-weight: bold;
+    color: #B22222;
+    margin-top: 20px;
+}
+
+.endereco-section input{
+    width: 180px;
+    border-radius: 5px;
+    border: 2px solid #B22222;
+    height: 30px;
+    padding: 10px;
+}
+.endereco-section select {
+    padding: 8px;
+    border: 2px solid #B22222;
+    border-radius: 5px;
+  
+}
+
+.endereco-section .btn {
+    margin-top: 15px;
+    background-color: #B22222;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.endereco-section .btn:hover {
+    background-color: #8B0000;
+    transform: scale(1.05);
+}
+
+#form-endereco {
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #FFF9F9;
+    max-width:  800px;
+}
+
+/* Fundo do modal */
+.modal {
+  display: none; /* Oculto por padrão */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+  animation: fadeIn 0.3s ease;
+}
+
+/* Conteúdo da caixa */
+.modal-conteudo {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 30px 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+  animation: slideIn 0.4s ease;
+}
+
+/* Botão de fechar */
+.fechar {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-30px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}

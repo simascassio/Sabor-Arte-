@@ -121,3 +121,95 @@ document.addEventListener("DOMContentLoaded", () => {
     atualizarRefriPet(refriGrande.value);
   });
 });
+// Seletor do pedido e total
+const PedidoDiv = document.querySelector(".pedido");
+const totalSpan = document.getElementById("total");
+
+// Estado
+let pedido = JSON.parse(localStorage.getItem("pedido")) || [];
+let total = parseFloat(localStorage.getItem("total")) || 0;
+
+atualizarPedido();
+function adicionarPedido(botao) {
+  const itemDiv = botao.closest(".item");
+  const nome = itemDiv.querySelector("h3").textContent.trim();
+
+  const precoSpanPizza = itemDiv.querySelector(".preco"); // para pizza
+  const precoSpanOutros = itemDiv.querySelector(".preco-valor"); // bebidas e sobremesas
+
+  const precoStr = precoSpanPizza?.textContent || precoSpanOutros?.textContent || "";
+  const preco = parseFloat(precoStr.replace("Preço: R$", "").replace("R$", "").replace(",", ".").trim());
+
+  const qntdInput = itemDiv.querySelector('input[type="number"]');
+  const qntd = parseInt(qntdInput?.value);
+
+  // Validações
+  if (isNaN(preco) || isNaN(qntd) || qntd <= 0) {
+    alert("Selecione um tamanho e informe uma quantidade válida maior que 0.");
+    return;
+  }
+
+  pedido.push({ nome, preco, qntd });
+  total += preco * qntd;
+
+  qntdInput.value = ""; // limpa campo quantidade
+
+  salvarEstado();
+  atualizarPedido();
+}
+
+
+
+// Atualização da visualização
+function atualizarPedido() {
+  if (pedido.length === 0) {
+    PedidoDiv.innerHTML = "<p class='pedido-vazio'>Nenhum item selecionado ainda.</p>";
+  } else {
+    PedidoDiv.innerHTML = pedido.map((item, i) => {
+      const subtotal = (item.preco * item.qntd).toFixed(2).replace('.', ',');
+      return `
+        <div class="item-pedido">
+          <span>${item.nome} (${item.qntd}×) - R$ ${subtotal}</span>
+          <button class="btn-remover" onclick="removerPizza(${i})" aria-label="Remover item">❌</button>
+        </div>`;
+    }).join("");
+  }
+  totalSpan.textContent = total.toFixed(2).replace('.', ',');
+}
+
+// Função remover item
+function removerPizza(index) {
+  const item = pedido[index];
+  total -= item.preco * item.qntd;
+  pedido.splice(index, 1);
+  salvarEstado();
+  atualizarPedido();
+}
+
+// Finalizar pedido
+// Finalizar pedido
+function finalizarPedido() {
+  if (pedido.length === 0) {
+    alert("Adicione pelo menos um item!");
+    return;
+  }
+
+  // Redireciona para a página do resumo
+  window.location.href = "finalizar.html"; // Altere se o nome da sua página for diferente
+}
+
+
+
+// Limpar pedido
+function limparPedido() {
+  pedido = [];
+  total = 0;
+  salvarEstado();
+  atualizarPedido();
+}
+
+// Persistência
+function salvarEstado() {
+  localStorage.setItem("pedido", JSON.stringify(pedido));
+  localStorage.setItem("total", total.toString());
+}

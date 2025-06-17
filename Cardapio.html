@@ -51,7 +51,9 @@
                         </select>
                         <label>Quantidade:</label>
                         <input type="number" min="1" value="1" class="qntd">
+                      
                     </div>
+                    <button class="btn-adicionar" onclick="adicionarPedido(this)">Adicionar</button>
                 </div>
         
                 <!-- Calabresa -->
@@ -70,6 +72,9 @@
                         <label>Quantidade:</label>
                         <input type="number" min="1" value="1" class="qntd">
                     </div>
+                     <button class="btn-adicionar" onclick="adicionarPedido(this)">Adicionar</button>
+                       
+
                 </div>
         
                 <!-- Portuguesa -->
@@ -88,6 +93,7 @@
                         <label>Quantidade:</label>
                         <input type="number" min="1" value="1" class="qntd">
                     </div>
+                     <button class="btn-adicionar" onclick="adicionarPedido(this)">Adicionar</button>
                 </div>
         
                 
@@ -107,6 +113,7 @@
                         <label>Quantidade:</label>
                         <input type="number" min="1" value="1" class="qntd">
                     </div>
+                     <button class="btn-adicionar" onclick="adicionarPedido(this)">Adicionar</button>
                 </div>
         
                 <!-- Frango com Catupiry -->
@@ -125,6 +132,7 @@
                         <label>Quantidade:</label>
                         <input type="number" min="1" value="1" class="qntd">
                     </div>
+                     <button class="btn-adicionar" onclick="adicionarPedido(this)">Adicionar</button>
                 </div>
         
                 <!-- Peperoni -->
@@ -143,6 +151,7 @@
                         <label>Quantidade:</label>
                         <input type="number" min="1" value="1" class="qntd">
                     </div>
+                     <button class="btn-adicionar" onclick="adicionarPedido(this)">Adicionar</button>
                 </div>
             </div>
         </section>
@@ -177,6 +186,7 @@
         <label>Quantidade:</label>
         <input type="number" min="1" value="1" class="qntd-dinamica">
       </div>
+       <button class="btn-adicionar" onclick="adicionarPedido(this)">Adicionar</button>
     </div>
 
     <!-- Refrigerante 2 Litros -->
@@ -195,6 +205,7 @@
         <label>Quantidade:</label>
         <input type="number" min="1" value="1" class="qntd-dinamica">
       </div>
+       <button class="btn-adicionar" onclick="adicionarPedido(this)">Adicionar</button>
     </div>
 
     <!-- Guaracamp -->
@@ -210,7 +221,9 @@
         <label>Quantidade:</label>
         <input type="number" min="1" value="1" class="qntd-dinamica">
       </div>
+       <button class="btn-adicionar" onclick="adicionarPedido(this)">Adicionar</button>
     </div>
+    
   </div>
 </section>
 
@@ -229,6 +242,7 @@
         <label>Quantidade:</label>
         <input type="number" min="1" value="1" class="qntd-dinamica">
       </div>
+       <button class="btn-adicionar" onclick="adicionarPedido(this)">Adicionar</button>
     </div>
 
     <!-- Brownie -->
@@ -241,38 +255,36 @@
         <label>Quantidade:</label>
         <input type="number" min="1" value="1" class="qntd-dinamica">
       </div>
+       <button class="btn-adicionar" onclick="adicionarPedido(this)">Adicionar</button>
     </div>
   </div>
 </section>
 
 
-        <!-- Seção de Endereço -->
-        <section class="endereco-section" aria-label="Endereço de Entrega">
-            <h2>Endereço para Entrega</h2>
-            <form id="form-endereco">
-                <label for="cep">CEP:</label>
-                <input type="text" id="cep" name="cep" placeholder="00000-000" required>
-                
-                <label for="rua">Rua:</label>
-                <input type="text" id="rua" name="rua" required>
-                
-                <label for="bairro">Bairro:</label>
-                <input type="text" id="bairro" name="bairro" required>
-                
-                <label for="numero">Número:</label>
-                <input type="text" id="numero" name="numero" required>
+        <!-- meu pedido -->
+         <section class="lista-pedido" id="pedido">
+        <div class="title-pedido">
+          
+            <img src="https://cdn-icons-png.freepik.com/256/384/384990.png?ga=GA1.1.1350957922.1743372057&semt=ais_hybrid" alt="" class="pedido-icon">
+            <h3> Seu Pedido</h3>
+        </div>
 
-                <label for="pagamento">Método de Pagamento:</label>
-                <select id="pagamento" name="pagamento" required>
-                    <option value="pix">Pix</option>
-                    <option value="debito">Débito</option>
-                    <option value="credito">Crédito</option>
-                    <option value="dinheiro">Dinheiro</option>
-                </select>
+        <!-- Área onde os itens adicionados aparecerão -->
+        <div class="pedido">
+            <p class="pedido-vazio">Nenhum item foi selecionada ainda.</p>
+        </div>
 
-                <button type="submit" class="btn">Confirmar Pedido</button>
-            </form>
-        </section>
+        <!-- Total do pedido -->
+        <div class="total-pedido">  
+            <span>Total: R$ <span id="total"> 0,00</span></span>
+        </div>
+
+        <!-- Botões para limpar ou finalizar o pedido -->
+        <div class="btn-pedido">
+            <button onclick="limparPedido()" id="limpar-btn">Limpar Pedido</button>
+            <button onclick="finalizarPedido()" id="finalizar-btn">Finalizar Pedido</button>
+        </div>
+    </section> 
     </main>
     
 </body>
