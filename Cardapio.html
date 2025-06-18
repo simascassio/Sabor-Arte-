@@ -7,27 +7,35 @@
     <link rel="stylesheet" href="css/Login-cardapio.css">
      <script src="js/dark.js" defer></script>
      <script src="js/cardapio.js" defer></script>
+     <script src="js/login.js" defer></script>
 </head>
 <body>
     <!-- Header -->
-    <header class="opcoes">
-        <nav>
-           <a href="Home.html" class="text">Home</a>
-           <a href="Login.html" class="text">Login</a>
-           <a href="Home.html#redes" class="text">Contato</a>
-           <a href="finalizar.html" class="text">Pedido</a>
-            <div class="dropdown">
-               <a href="Cardapio.html" class="text">Cardápio</a>
-            <div class="dropdown-content">
-                <a href="Cardapio.html">Pizzas</a>
-                 <a href="Cardapio.html#sobremesas">Sobremesas</a>
-                <a href="Cardapio.html#bebidas">Bebidas</a>
-            </div>
-</div>
+     <header class="opcoes">
+  <nav class="container-navbar">
+    <div class="nav-esquerda">
+      <a href="Home.html" class="text">Home</a>
+      <a href="Home.html#redes" class="text">Contato</a>
+      <a href="Login.html" class="text">Login</a>
+      <a href="finalizar.html" class="text">Pedido</a>
 
-             
-        </nav>
-    </header>
+      <div class="dropdown">
+        <a href="Cardapio.html" class="text">Cardápio</a>
+        <div class="dropdown-content">
+          <a href="Cardapio.html">Pizzas</a>
+          <a href="Cardapio.html#bebidas">Sobremesas</a>
+          <a href="Cardapio.html#sobremesas">Bebidas</a>
+        </div>
+      </div>
+    </div>
+      <div class="usuario-box" onclick="alternarSair()">
+       <span id="nome-usuario"></span>
+       <img id="usuario" src="https://img.icons8.com/ios-filled/50/FFFFFF/user-male-circle.png" alt="Usuário">
+       <button id="btn-sair" onclick="sair()">Sair</button>
+    </div>
+    
+  </nav>
+</header>
 
     <!-- Conteúdo principal -->
     <main class="container">

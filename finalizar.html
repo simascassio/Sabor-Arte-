@@ -6,30 +6,36 @@
     <link rel="stylesheet" href="css/finalizar.css">
     <script src="js/finalizar.js" defer></script>
     <script src="js/dark.js" defer></script>
+    <script src="js/login.js" defer></script>
     <title>Finalizar Pedido</title>
 </head>
 <body>
-    
       <header class="opcoes">
-        <nav>
-           <a href="Home.html" class="text">Home</a>
-           <a href="Home.html#redes" class="text">Contato</a>
-           <a href="Login.html" class="text">Login</a>
-           <a href="finalizar.html" class="text">Pedido</a>
-          <div class="dropdown">
-               <a href="Cardapio.html" class="text">Cardápio</a>
-              <div class="dropdown-content">
-                <a href="Cardapio.html">Pizzas</a>
-                 <a href="Cardapio.html#bebidas">Sobremesas</a>
-                <a href="Cardapio.html#sobremesas">Bebidas</a>
-              </div>    
-          </div> 
-             
-        </nav>
+  <nav class="container-navbar">
+    <div class="nav-esquerda">
+      <a href="Home.html" class="text">Home</a>
+      <a href="Home.html#redes" class="text">Contato</a>
+      <a href="Login.html" class="text">Login</a>
+      <a href="finalizar.html" class="text">Pedido</a>
 
-    </header>
+      <div class="dropdown">
+        <a href="Cardapio.html" class="text">Cardápio</a>
+        <div class="dropdown-content">
+          <a href="Cardapio.html">Pizzas</a>
+          <a href="Cardapio.html#bebidas">Sobremesas</a>
+          <a href="Cardapio.html#sobremesas">Bebidas</a>
+        </div>
+      </div>
+    </div>
+    <div class="usuario-box" onclick="alternarSair()">
+       <span id="nome-usuario"></span>
+       <img id="usuario" src="https://img.icons8.com/ios-filled/50/FFFFFF/user-male-circle.png" alt="Usuário">
+       <button id="btn-sair" onclick="sair()">Sair</button>
+    </div>
+  </nav>
+</header>
 
-        <main>
+        <main class="container-principal">
             <section  class="pedido-section" aria-label="Itens do Pedido">
                 <div class="pedido-finalizar">
                     <h1> Confira os itens do seu pedido:</h1>
@@ -42,7 +48,7 @@
                    
                 </div>
             </section>
-        </main>
+      
 
         
          <section class="dark-mode">
@@ -88,6 +94,6 @@
     <p>✅ Pedido feito com sucesso!<br>Prazo de entrega: 40 minutos.</p>
   </div>
 </div>
-
+</main>
 </body>
 </html>

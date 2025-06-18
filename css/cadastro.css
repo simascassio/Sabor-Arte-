@@ -15,25 +15,125 @@ body { /* FORA */
     background-color: #F3E9DA; /* bege suave */
     padding-top: 100px; /* espaço por causa do header fixo */
 }
-
-.opcoes { /* NAV */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #B22222; /* vermelho institucional */
-    padding: 30px 0;
-    text-align: left;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+.opcoes {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #B22222; /* vermelho institucional */
+  padding: 30px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
-/* Estilo do dropdown (submenu) */
+.container-navbar {
+  display: flex;
+  justify-content: space-between; /* links na esquerda, ícone na direita */
+  align-items: center;
+  padding: 0 30px;
+}
 
-.opcoes a { /* NAV TEXTO */
-    text-decoration: none;
-    margin: 0 25px;
-    
+/* LINKS ESQUERDA */
+.nav-esquerda {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-esquerda a {
+  text-decoration: none;
+  color: white;
+  font-size: 17px;
+  letter-spacing: 2px;
+  padding: 6px;
+}
+
+.nav-esquerda a:hover {
+  color: #8B0000;
+}
+
+/* DROPDOWN */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #B22222;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+.dropdown-content a:hover {
+  background-color: #d1c89f;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ÍCONE DIREITA */
+#usuario{
+  width: 40px;
+  height: 30px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: all 0.3s ease;
+ 
+}
+#usuario:hover {
+  transform: translateY(-5px);
+
+}
+
+
+.usuario-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#nome-usuario {
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+#btn-sair {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 50px;
+  top: 35px;
+  right: 0;
+  font-size: 11px;
+  background-color: #B22222;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 2px 8px;
+  border-radius: 5px;
+  display: none;
+  cursor: pointer;
+  z-index: 10;
+  transition: all   0.3s ease;
+}
+
+#btn-sair:hover {
+  background-color: #8B0000;
 }
 
 
@@ -46,12 +146,6 @@ body { /* FORA */
     letter-spacing: 2px;
     font-size: 17px;
 }
-
-
-.opcoes a:hover { /* NAV TEXTO */
-    color: #8B0000; /* vermelho escuro no hover */
-}
-
 
 .container { /* DENTRO */
     background: #FFF9F9; /* branco rosado */
