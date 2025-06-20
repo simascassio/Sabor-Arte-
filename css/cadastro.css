@@ -15,15 +15,17 @@ body { /* FORA */
     background-color: #F3E9DA; /* bege suave */
     padding-top: 100px; /* espaço por causa do header fixo */
 }
-.opcoes {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #B22222; /* vermelho institucional */
-  padding: 30px 0;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+
+.opcoes { /* NAV */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #B22222; /* vermelho institucional */
+    padding: 30px 0;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
 .container-navbar {
@@ -33,7 +35,7 @@ body { /* FORA */
   padding: 0 30px;
 }
 
-/* LINKS ESQUERDA */
+
 .nav-esquerda {
   display: flex;
   align-items: center;
@@ -136,6 +138,14 @@ body { /* FORA */
   background-color: #8B0000;
 }
 
+/* Estilo do dropdown (submenu) */
+
+/*.opcoes a { /* NAV TEXTO */
+    /*text-decoration: none;
+    margin: 0 25px;
+    
+}*/
+
 
 .text { /* NAV TEXTO */
     font-family: Arial, Helvetica, sans-serif;
@@ -146,6 +156,12 @@ body { /* FORA */
     letter-spacing: 2px;
     font-size: 17px;
 }
+
+
+/*.opcoes a:hover { /* NAV TEXTO */
+/*color: #8B0000; /* vermelho escuro no hover 
+}*/
+
 
 .container { /* DENTRO */
     background: #FFF9F9; /* branco rosado */
@@ -221,9 +237,14 @@ select { /* SEXO */
 
 
 .error { /* MENSAGEM DE ERRO */
+    align-self: flex-start;
+    margin-left: 25px;
+    margin-top: -7px;
+    font-size: 0.9em;
     color: red;
-    display: none;
+    
 }
+
 
 
 .btn:hover { /* DENTRO BOTAO */
@@ -249,7 +270,7 @@ select { /* SEXO */
     .input {
         width: 100%;
     }
-}
+  }
 
 
 
@@ -302,8 +323,7 @@ body.dark-mode section
   background-color: #1e1e1e ;
  
 }
-
- body.dark-mode p{
+body.dark-mode p{
     color: #f1f1f1; /* Cor do texto em modo escuro */
  } 
  
